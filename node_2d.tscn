@@ -15,10 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://dag6sp4r8ek5m" path="res://Fence_Vertical.png" id="9_tntxl"]
 [ext_resource type="Texture2D" uid="uid://d3x8fni4msj5k" path="res://Ice_Top_Right.png" id="9_volop"]
 [ext_resource type="PackedScene" uid="uid://cgcioo35x4bl5" path="res://character_body_2d.tscn" id="10_gxv12"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="11_hwhmy"]
 [ext_resource type="Texture2D" uid="uid://bads3guqv1ura" path="res://Ice_Bottom_Left.png" id="15_dx7t8"]
 [ext_resource type="Texture2D" uid="uid://q5is3t47eerq" path="res://Ice_Bottom_Middle.png" id="16_2ssd6"]
 [ext_resource type="Texture2D" uid="uid://dtvnm0n2tqpq3" path="res://Ice_Bottom_Right.png" id="17_1kr44"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="19_m80tx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwqes"]
 texture = ExtResource("1_2lxfm")
@@ -1257,6 +1257,8 @@ position = Vector2(570, -1.5)
 shape = SubResource("RectangleShape2D_ujblj")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_gxv12")]
-script = ExtResource("11_hwhmy")
+position = Vector2(542, 213)
+script = ExtResource("19_m80tx")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(2, 4)

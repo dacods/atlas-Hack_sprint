@@ -6737,9 +6737,9 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="HealthLabel" type="Label" parent="CanvasLayer"]
-offset_left = 24.0
+offset_left = 45.0
 offset_top = 2.0
-offset_right = 71.0
+offset_right = 92.0
 offset_bottom = 29.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
@@ -6751,6 +6751,7 @@ offset_right = 1154.0
 offset_bottom = 1183.0
 
 [node name="TextPanel" type="Panel" parent="CanvasLayer"]
+visible = false
 offset_left = 344.0
 offset_top = 471.0
 offset_right = 828.0
@@ -6761,10 +6762,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rjsb7")
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.04
-offset_left = 1.0
-offset_top = 8.0
-offset_right = 477.0
-offset_bottom = 166.84
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 484.0
+offset_bottom = 162.84
 autowrap_mode = 1
 
 [node name="Enemy" parent="." groups=["enemies"] instance=ExtResource("26_eotoj")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://bs5eewm8s7jbw"]
+[gd_scene load_steps=74 format=3 uid="uid://bs5eewm8s7jbw"]
 
 [ext_resource type="Texture2D" uid="uid://cibe6t5px82q1" path="res://Snow_3.png" id="1_2lxfm"]
 [ext_resource type="Texture2D" uid="uid://v73gblhimkw5" path="res://spritesheet.png" id="2_estcb"]
@@ -3344,7 +3344,7 @@ sources/15 = SubResource("TileSetAtlasSource_lo4vd")
 size = Vector2(14.9678, 12.9231)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wvhn"]
-size = Vector2(21, 10)
+size = Vector2(41, 10)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ylrv7"]
 texture = ExtResource("3_chop8")
@@ -3935,6 +3935,9 @@ texture = ExtResource("2_estcb")
 [sub_resource type="TileSet" id="TileSet_bugnp"]
 sources/2 = SubResource("TileSetAtlasSource_8xhfx")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_usnlh"]
+size = Vector2(25, 7)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Snow" type="TileMap" parent="."]
@@ -4071,7 +4074,7 @@ horizontal_alignment = 1
 [node name="AttackArea2D" type="Area2D" parent="CharacterBody2D" groups=["player_attack"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/AttackArea2D"]
-position = Vector2(-7.5, 3)
+position = Vector2(2.5, 3)
 shape = SubResource("RectangleShape2D_6wvhn")
 
 [node name="Houses" type="TileMap" parent="."]
@@ -4096,17 +4099,27 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 
-[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
+[node name="HealthLabel" type="Label" parent="CanvasLayer"]
 offset_left = 24.0
 offset_top = 2.0
 offset_right = 71.0
 offset_bottom = 29.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="Enemy" parent="." groups=["enemies"] instance=ExtResource("26_eotoj")]
 position = Vector2(564, 985)
 
+[node name="AttackArea2D" type="Area2D" parent="Enemy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/AttackArea2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_usnlh")
+
 [node name="Enemy_2" parent="." groups=["enemies"] instance=ExtResource("27_6wtam")]
 position = Vector2(471, 777)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(560, 220)
 
 [connection signal="body_entered" from="Chest/Area2D" to="Chest" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Chest/Area2D" to="Chest" method="_on_area_2d_body_exited"]

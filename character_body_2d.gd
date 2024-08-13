@@ -5,6 +5,10 @@ var speed = 200
 # Player health
 var max_health = 100
 var current_health = 100
+var regeneration_rate = 5  # Amount of health to regenerate per interval
+var regeneration_interval = 1.0  # Time in seconds between each regeneration
+var time_since_last_damage = 0.0  # Time elapsed since the player last took damage
+var regeneration_delay = 3.0  # Delay before regeneration starts after taking damage
 
 # Attack-related variables
 var is_attacking = false
@@ -14,18 +18,20 @@ var can_attack = true
 # Reference to the player's inventory
 var inventory = null
 
-# Reference to the ProgressBar for displaying health
-@onready var health_bar = $"../CanvasLayer/HealthBar"  # Adjust the path to match your scene
+# Reference to the Label for displaying health
+@onready var health_label = $"../CanvasLayer/HealthLabel" # Adjusted the path to match your scene
+
+# Reference to the Marker2D for respawn point
+@onready var respawn_point = $"../Marker2D"  # Adjust the path to match your scene
 
 func _ready():
-	# Debugging to check if HealthBar is found
-	if health_bar == null:
-		print("HealthBar not found!")
+	# Debugging to check if HealthLabel is found
+	if health_label == null:
+		print("HealthLabel not found!")
 	else:
-		print("HealthBar found successfully!")
-		# Initialize the health bar
-		health_bar.max_value = max_health
-		health_bar.value = current_health
+		print("HealthLabel found successfully!")
+		# Initialize the health label
+		update_health_label()
 
 	# Use the correct path to find the inventory node
 	inventory = get_node("../CharacterBody2D/Inventory")
@@ -58,6 +64,13 @@ func _process(delta):
 		else:
 			print("Player tried to attack, but does not have an axe!")
 
+	# Update time since last damage
+	time_since_last_damage += delta
+
+	# Regenerate health if the player hasn't taken damage for a while
+	if time_since_last_damage >= regeneration_delay:
+		regenerate_health(delta)
+
 func perform_attack():
 	is_attacking = true
 	can_attack = false
@@ -88,16 +101,43 @@ func take_damage(amount):
 	current_health -= amount
 	print("Player took " + str(amount) + " damage, current health: " + str(current_health))
 
-	# Update the health bar
-	if health_bar != null:
-		health_bar.value = current_health
+	# Reset the time since last damage to 0
+	time_since_last_damage = 0.0
+
+	# Update the health label
+	if health_label != null:
+		update_health_label()
 
 	if current_health <= 0:
 		die()
 
 func die():
 	print("Player died!")
-	queue_free()  # Or handle game over logic here
+	respawn()
+
+func respawn():
+	# Reset the player's health
+	current_health = max_health
+
+	# Update the health label
+	update_health_label()
+
+	# Move the player to the respawn point's position
+	global_position = respawn_point.global_position
+
+	# Print a message indicating the player has respawned
+	print("Player has respawned at position: " + str(respawn_point.global_position))
+
+func regenerate_health(delta):
+	if current_health < max_health:
+		current_health += regeneration_rate * delta
+		current_health = clamp(current_health, 0, max_health)
+		update_health_label()
+
+func update_health_label():
+	if health_label != null:
+		# Round the health value before displaying it
+		health_label.text = "Health: " + str(int(round(current_health))) + "/" + str(max_health)
 
 func has_axe() -> bool:
 	if inventory != null:

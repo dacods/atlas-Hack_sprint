@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://bs5eewm8s7jbw"]
+[gd_scene load_steps=74 format=3 uid="uid://j4pf4dpb03bv"]
 
 [ext_resource type="Texture2D" uid="uid://cibe6t5px82q1" path="res://Snow_3.png" id="1_2lxfm"]
 [ext_resource type="Texture2D" uid="uid://v73gblhimkw5" path="res://spritesheet.png" id="2_estcb"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dcjtqxhpy6yqe" path="res://Fence_Top_Right.png" id="8_ocdq1"]
 [ext_resource type="Texture2D" uid="uid://dag6sp4r8ek5m" path="res://Fence_Vertical.png" id="9_tntxl"]
 [ext_resource type="Texture2D" uid="uid://d3x8fni4msj5k" path="res://Ice_Top_Right.png" id="9_volop"]
-[ext_resource type="PackedScene" uid="uid://cgcioo35x4bl5" path="res://character_body_2d.tscn" id="10_gxv12"]
+[ext_resource type="PackedScene" uid="uid://b17qd4uawyg4e" path="res://character_body_2d.tscn" id="10_gxv12"]
 [ext_resource type="Texture2D" uid="uid://cepegquuibpfp" path="res://chest_01.png" id="11_407vg"]
 [ext_resource type="Texture2D" uid="uid://bads3guqv1ura" path="res://Ice_Bottom_Left.png" id="15_dx7t8"]
 [ext_resource type="Texture2D" uid="uid://q5is3t47eerq" path="res://Ice_Bottom_Middle.png" id="16_2ssd6"]
@@ -25,8 +25,8 @@
 [ext_resource type="Script" path="res://Inventory.gd" id="23_7srx1"]
 [ext_resource type="Texture2D" uid="uid://coakjbvgouegs" path="res://axe.png" id="23_gcfo5"]
 [ext_resource type="Script" path="res://Chest.gd" id="23_wd245"]
-[ext_resource type="PackedScene" uid="uid://bae37r8rphxxe" path="res://enemy.tscn" id="26_eotoj"]
-[ext_resource type="PackedScene" uid="uid://15toxrjsoqyh" path="res://enemy_2.tscn" id="27_6wtam"]
+[ext_resource type="PackedScene" uid="uid://bq5osmqt5u60d" path="res://enemy.tscn" id="26_eotoj"]
+[ext_resource type="PackedScene" uid="uid://cj365l1it4bgb" path="res://enemy_2.tscn" id="27_6wtam"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwqes"]
 texture = ExtResource("1_2lxfm")

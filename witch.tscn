@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bphdnppcsnrle"]
+
+[ext_resource type="Script" path="res://Witch.gd" id="1_sygy1"]
+[ext_resource type="Texture2D" uid="uid://b7pum3i656lkb" path="res://Witch.png" id="2_ayplc"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_t5anf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_teslw"]
+size = Vector2(24, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udgkg"]
+size = Vector2(24, 55)
+
+[node name="Witch" type="CharacterBody2D"]
+script = ExtResource("1_sygy1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(22.4688, -11.5)
+scale = Vector2(0.0498657, 0.0556641)
+texture = ExtResource("2_ayplc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, -10.5)
+shape = SubResource("RectangleShape2D_teslw")
+
+[node name="Area2D" type="Area2D" parent="CollisionShape2D"]
+script = ExtResource("3_t5anf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D"]
+shape = SubResource("RectangleShape2D_udgkg")
+
+[connection signal="body_entered" from="CollisionShape2D/Area2D" to="." method="_on_area_2d_body_entered"]

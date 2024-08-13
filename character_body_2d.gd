@@ -49,6 +49,9 @@ func perform_attack():
 	# Print statement to indicate attack has started
 	print("Player is attacking!")
 
+	# Check for collisions with enemies or objects
+	check_attack_collision()
+
 	# After attacking, start the cooldown
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
@@ -57,18 +60,20 @@ func perform_attack():
 	# Print statement to indicate the attack cooldown has finished
 	print("Attack cooldown finished, can attack again.")
 
-	# Check for collisions with enemies or objects
-	check_attack_collision()
-
 func check_attack_collision():
 	# Implement your collision detection logic here
 	# Assuming you have an Area2D for the attack range
 	var attack_area = $AttackArea2D  # Replace with the correct path to your AttackArea2D node
 	if attack_area:
+		var enemy_hit = false
 		for body in attack_area.get_overlapping_bodies():
 			if body.is_in_group("enemies"):  # Assuming enemies are in an "enemies" group
 				body.take_damage(10)  # Apply damage to the enemy
+				enemy_hit = true
 				print("Enemy hit!")
+
+		if not enemy_hit:
+			print("Attack missed! No enemies hit.")
 
 func has_axe() -> bool:
 	if inventory != null:

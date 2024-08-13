@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://bs5eewm8s7jbw"]
+[gd_scene load_steps=73 format=3 uid="uid://bs5eewm8s7jbw"]
 
 [ext_resource type="Texture2D" uid="uid://cibe6t5px82q1" path="res://Snow_3.png" id="1_2lxfm"]
 [ext_resource type="Texture2D" uid="uid://v73gblhimkw5" path="res://spritesheet.png" id="2_estcb"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://coakjbvgouegs" path="res://axe.png" id="23_gcfo5"]
 [ext_resource type="Script" path="res://Chest.gd" id="23_wd245"]
 [ext_resource type="PackedScene" uid="uid://bae37r8rphxxe" path="res://enemy.tscn" id="26_eotoj"]
+[ext_resource type="PackedScene" uid="uid://15toxrjsoqyh" path="res://enemy_2.tscn" id="27_6wtam"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwqes"]
 texture = ExtResource("1_2lxfm")
@@ -4095,8 +4096,17 @@ layout_mode = 2
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 71.0
+offset_bottom = 29.0
+
 [node name="Enemy" parent="." groups=["enemies"] instance=ExtResource("26_eotoj")]
 position = Vector2(564, 985)
+
+[node name="Enemy_2" parent="." groups=["enemies"] instance=ExtResource("27_6wtam")]
+position = Vector2(471, 777)
 
 [connection signal="body_entered" from="Chest/Area2D" to="Chest" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Chest/Area2D" to="Chest" method="_on_area_2d_body_exited"]

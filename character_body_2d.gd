@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 var speed = 200
 
+# Player health
+var max_health = 100
+var current_health = 100
+
 # Attack-related variables
 var is_attacking = false
 var attack_cooldown = 0.5  # Half a second cooldown between attacks
@@ -10,7 +14,19 @@ var can_attack = true
 # Reference to the player's inventory
 var inventory = null
 
+# Reference to the ProgressBar for displaying health
+@onready var health_bar = $"../CanvasLayer/HealthBar"  # Adjust the path to match your scene
+
 func _ready():
+	# Debugging to check if HealthBar is found
+	if health_bar == null:
+		print("HealthBar not found!")
+	else:
+		print("HealthBar found successfully!")
+		# Initialize the health bar
+		health_bar.max_value = max_health
+		health_bar.value = current_health
+
 	# Use the correct path to find the inventory node
 	inventory = get_node("../CharacterBody2D/Inventory")
 
@@ -49,9 +65,6 @@ func perform_attack():
 	# Print statement to indicate attack has started
 	print("Player is attacking!")
 
-	# Check for collisions with enemies or objects
-	check_attack_collision()
-
 	# After attacking, start the cooldown
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
@@ -60,20 +73,31 @@ func perform_attack():
 	# Print statement to indicate the attack cooldown has finished
 	print("Attack cooldown finished, can attack again.")
 
+	# Check for collisions with enemies or objects
+	check_attack_collision()
+
 func check_attack_collision():
-	# Implement your collision detection logic here
-	# Assuming you have an Area2D for the attack range
 	var attack_area = $AttackArea2D  # Replace with the correct path to your AttackArea2D node
 	if attack_area:
-		var enemy_hit = false
 		for body in attack_area.get_overlapping_bodies():
-			if body.is_in_group("enemies"):  # Assuming enemies are in an "enemies" group
+			if body.is_in_group("enemies"):
 				body.take_damage(10)  # Apply damage to the enemy
-				enemy_hit = true
 				print("Enemy hit!")
 
-		if not enemy_hit:
-			print("Attack missed! No enemies hit.")
+func take_damage(amount):
+	current_health -= amount
+	print("Player took " + str(amount) + " damage, current health: " + str(current_health))
+
+	# Update the health bar
+	if health_bar != null:
+		health_bar.value = current_health
+
+	if current_health <= 0:
+		die()
+
+func die():
+	print("Player died!")
+	queue_free()  # Or handle game over logic here
 
 func has_axe() -> bool:
 	if inventory != null:
@@ -83,4 +107,4 @@ func has_axe() -> bool:
 	return false
 
 func _on_area_2d_body_entered(body):
-	pass # Replace with function body.
+	pass  # Replace with function body.

@@ -4077,6 +4077,8 @@ horizontal_alignment = 1
 position = Vector2(2.5, 3)
 shape = SubResource("RectangleShape2D_6wvhn")
 
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D/AttackArea2D/CollisionShape2D"]
+
 [node name="Houses" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_uarts")
 format = 2

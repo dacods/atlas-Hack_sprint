@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/grass.png.import
-uid="uid://be4t72hlcpe2y"
+uid="uid://cqtpa6qqq0gbn"
 path="res://.godot/imported/grass.png-a207bda4a53e32c7645a41ec6d1c234e.ctex"
-========
-uid="uid://bwua2veyg3i56"
-path="res://.godot/imported/Sucker.webp-ee9269c28af7a2f86564bfb534ed0671.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Sucker.webp.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/grass.png.import
 source_file="res://assets/grass.png"
 dest_files=["res://.godot/imported/grass.png-a207bda4a53e32c7645a41ec6d1c234e.ctex"]
-========
-source_file="res://Hansel_assets/Images/Sucker.webp"
-dest_files=["res://.godot/imported/Sucker.webp-ee9269c28af7a2f86564bfb534ed0671.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Sucker.webp.import
 
 [params]
 

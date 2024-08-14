@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/water_lillies.png.import
-uid="uid://h8ccw187icqc"
-path="res://.godot/imported/water_lillies.png-ad1535d050aa07b2943c124bfb22a962.ctex"
-========
-uid="uid://d2isn2hl0t7io"
+uid="uid://qs352la13wyb"
 path="res://.godot/imported/Fence_Top_Left.png-4e8fd854f7e1f888fa395d4fca1d7d05.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Fence_Top_Left.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/water_lillies.png.import
-source_file="res://assets/water_lillies.png"
-dest_files=["res://.godot/imported/water_lillies.png-ad1535d050aa07b2943c124bfb22a962.ctex"]
-========
 source_file="res://Hansel_assets/Images/Fence_Top_Left.png"
 dest_files=["res://.godot/imported/Fence_Top_Left.png-4e8fd854f7e1f888fa395d4fca1d7d05.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Fence_Top_Left.png.import
 
 [params]
 

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/fences.png.import
-uid="uid://c4mc2x28cg7r1"
-path="res://.godot/imported/fences.png-68afc444abaa1690467fb302e36c608f.ctex"
-========
-uid="uid://cibe6t5px82q1"
+uid="uid://ceew0bsc0ukc8"
 path="res://.godot/imported/Snow_3.png-6735bab0e0687fbf9e04c9a1b8d83b75.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Snow_3.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/fences.png.import
-source_file="res://assets/fences.png"
-dest_files=["res://.godot/imported/fences.png-68afc444abaa1690467fb302e36c608f.ctex"]
-========
 source_file="res://Hansel_assets/Images/Snow_3.png"
 dest_files=["res://.godot/imported/Snow_3.png-6735bab0e0687fbf9e04c9a1b8d83b75.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Snow_3.png.import
 
 [params]
 

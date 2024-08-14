@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/chest_01.png.import
-uid="uid://7a352lby34o0"
+uid="uid://dpycw1txe4vuj"
 path="res://.godot/imported/chest_01.png-513e54b5a7b883beb0de3aa7ad0f58b7.ctex"
-========
-uid="uid://cepegquuibpfp"
-path="res://.godot/imported/chest_01.png-bfd0f0489f3e5c064c7a18632067e6d1.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/chest_01.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/chest_01.png.import
 source_file="res://assets/chest_01.png"
 dest_files=["res://.godot/imported/chest_01.png-513e54b5a7b883beb0de3aa7ad0f58b7.ctex"]
-========
-source_file="res://Hansel_assets/Images/chest_01.png"
-dest_files=["res://.godot/imported/chest_01.png-bfd0f0489f3e5c064c7a18632067e6d1.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/chest_01.png.import
 
 [params]
 

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/VinesHeaderBanner.jpg.import
-uid="uid://n5gtx5s5cbor"
-path="res://.godot/imported/VinesHeaderBanner.jpg-0588df176001f2f61f3947cfb9b4f4e8.ctex"
-========
-uid="uid://dfgkk1tvuu6uw"
+uid="uid://f36orsd6xvfm"
 path="res://.godot/imported/Fence_Bottom_Left.png-68027aa3c3934cdf7271f4ff830aa531.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Fence_Bottom_Left.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/VinesHeaderBanner.jpg.import
-source_file="res://assets/VinesHeaderBanner.jpg"
-dest_files=["res://.godot/imported/VinesHeaderBanner.jpg-0588df176001f2f61f3947cfb9b4f4e8.ctex"]
-========
 source_file="res://Hansel_assets/Images/Fence_Bottom_Left.png"
 dest_files=["res://.godot/imported/Fence_Bottom_Left.png-68027aa3c3934cdf7271f4ff830aa531.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Fence_Bottom_Left.png.import
 
 [params]
 

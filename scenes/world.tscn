@@ -1,23 +1,24 @@
-[gd_scene load_steps=95 format=3 uid="uid://cvftfdq5lr6ml"]
+[gd_scene load_steps=97 format=3 uid="uid://cvftfdq5lr6ml"]
 
-[ext_resource type="Texture2D" uid="uid://ykbnpoudtmt0" path="res://assets/water1.png" id="3_i3r5y"]
-[ext_resource type="Texture2D" uid="uid://tdl1coxs1ux5" path="res://assets/water-sheet.png" id="4_kmjyb"]
+[ext_resource type="Texture2D" uid="uid://dlda1f5ousgy2" path="res://assets/water1.png" id="3_i3r5y"]
+[ext_resource type="Texture2D" uid="uid://7wtd4c4dxsyj" path="res://assets/water-sheet.png" id="4_kmjyb"]
 [ext_resource type="Texture2D" uid="uid://c5dlbg454v8uh" path="res://assets/plains.png" id="5_yxlbe"]
-[ext_resource type="Texture2D" uid="uid://bb68146vdhnrl" path="res://assets/objects.png" id="9_8x6rx"]
+[ext_resource type="Texture2D" uid="uid://clooheq5gg3au" path="res://assets/objects.png" id="9_8x6rx"]
 [ext_resource type="Texture2D" uid="uid://2s2paxfsmml5" path="res://assets/Rapunzel_tower (2).png" id="10_xo6bp"]
 [ext_resource type="Texture2D" uid="uid://bas4dnkx1sgah" path="res://assets/decor_8x8.png" id="11_ndtmd"]
 [ext_resource type="Texture2D" uid="uid://bopfwatt3unfn" path="res://assets/decor_16x16.png" id="12_15mlc"]
-[ext_resource type="Texture2D" uid="uid://c4mc2x28cg7r1" path="res://assets/fences.png" id="13_d8qfg"]
-[ext_resource type="Texture2D" uid="uid://dpfsxs3io16td" path="res://assets/water_decorations.png" id="14_f5bqk"]
-[ext_resource type="Texture2D" uid="uid://h8ccw187icqc" path="res://assets/water_lillies.png" id="15_ahi0y"]
+[ext_resource type="Texture2D" uid="uid://dtjiutso8dx8l" path="res://assets/fences.png" id="13_d8qfg"]
+[ext_resource type="Texture2D" uid="uid://yks0opc73vv4" path="res://assets/water_decorations.png" id="14_f5bqk"]
+[ext_resource type="Texture2D" uid="uid://b0imrq4wel5wr" path="res://assets/water_lillies.png" id="15_ahi0y"]
 [ext_resource type="Texture2D" uid="uid://das4uwlppenhl" path="res://assets/rock_in_water_01-sheet.png" id="16_q4y0o"]
 [ext_resource type="Texture2D" uid="uid://d4hhfcwgd2djp" path="res://assets/chest_02.png" id="17_k2dlg"]
-[ext_resource type="Texture2D" uid="uid://7a352lby34o0" path="res://assets/chest_01.png" id="18_lg7dh"]
-[ext_resource type="Texture2D" uid="uid://n5gtx5s5cbor" path="res://assets/VinesHeaderBanner.jpg" id="20_kxjx5"]
-[ext_resource type="Texture2D" uid="uid://cguk2q0b15xm5" path="res://assets/New Piskel (2).png" id="21_bstw1"]
-[ext_resource type="Texture2D" uid="uid://b6fl4lyo4dt33" path="res://assets/VinesSheet.png" id="22_wvh74"]
+[ext_resource type="Texture2D" uid="uid://dpycw1txe4vuj" path="res://assets/chest_01.png" id="18_lg7dh"]
+[ext_resource type="Texture2D" uid="uid://dvvymyfffn7q1" path="res://assets/VinesHeaderBanner.jpg" id="20_kxjx5"]
+[ext_resource type="Texture2D" uid="uid://cjcv0vrryns6c" path="res://assets/New Piskel (2).png" id="21_bstw1"]
+[ext_resource type="Texture2D" uid="uid://jjnb5tu0hd81" path="res://assets/VinesSheet.png" id="22_wvh74"]
+[ext_resource type="Script" path="res://scenes/transition_script.gd" id="23_ki5vj"]
 [ext_resource type="Texture2D" uid="uid://bd0jeeyid63co" path="res://assets/Rapunzel_tower (4).png" id="23_oxcd4"]
-[ext_resource type="Texture2D" uid="uid://dav0ey6yckdal" path="res://assets/LoopVine.png" id="24_h28xj"]
+[ext_resource type="Texture2D" uid="uid://dbltd2qa4jvfr" path="res://assets/LoopVine.png" id="24_h28xj"]
 [ext_resource type="PackedScene" uid="uid://bk3e803fmy5fd" path="res://scenes/character_body_2d.tscn" id="25_pk2hq"]
 [ext_resource type="PackedScene" uid="uid://b1c4x7pgis8y2" path="res://scenes/npc.tscn" id="26_dp0ag"]
 [ext_resource type="PackedScene" uid="uid://dno7hvw4h87mu" path="res://scenes/pascal.tscn" id="27_pnmsk"]
@@ -13133,6 +13134,9 @@ sources/4 = SubResource("TileSetAtlasSource_xn0wt")
 sources/5 = SubResource("TileSetAtlasSource_r1ahw")
 sources/6 = SubResource("TileSetAtlasSource_c8h71")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_pihul"]
+radius = 41.1096
+
 [node name="world" type="Node2D"]
 
 [node name="Grass_flooring" type="TileMap" parent="."]
@@ -13395,7 +13399,7 @@ tile_set = SubResource("TileSet_ttnon")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1114019, 786432, 0, -1179555, 0, 0, -1179554, 0, 0, -1179557, 0, 0, -1179558, 0, 0, -1179552, 720896, 5, -1114017, 720896, 5, -1245090, 0, 1342177280, -1245092, 0, 1342177280, -1245093, 0, 1342177280, -327588, 0, 1342177280, -327586, 0, 1342177280, -262052, 65536, 0, -262050, 65536, 0, -196514, 65536, 0, -589729, 262149, 2, -458657, 655360, 5, -524193, 5, 268435457, -458659, 65536, 0, -327589, 524293, 1610612737, -327585, 393221, 2, -1048481, 458757, 2, -1114016, 458757, 2, -196519, 6, 5, -196512, 196614, 5, -130977, 524294, 6, -130982, 524294, 6)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("25_pk2hq")]
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("25_pk2hq")]
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(1.333, 1)
@@ -13408,3 +13412,14 @@ position = Vector2(106, -430)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("28_vk57g")]
 position = Vector2(506, -180)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1638, 48)
+monitorable = false
+script = ExtResource("23_ki5vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-18, -2)
+shape = SubResource("CircleShape2D_pihul")
+
+[connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/water_decorations.png.import
-uid="uid://dpfsxs3io16td"
+uid="uid://yks0opc73vv4"
 path="res://.godot/imported/water_decorations.png-6636300aadb1f918f2dad2193bd3001a.ctex"
-========
-uid="uid://c6fopr0d4frcy"
-path="res://.godot/imported/Fence_Bottom_Right.png-15f24aa9993a5024cac28d87589ffbee.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Fence_Bottom_Right.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/water_decorations.png.import
 source_file="res://assets/water_decorations.png"
 dest_files=["res://.godot/imported/water_decorations.png-6636300aadb1f918f2dad2193bd3001a.ctex"]
-========
-source_file="res://Hansel_assets/Images/Fence_Bottom_Right.png"
-dest_files=["res://.godot/imported/Fence_Bottom_Right.png-15f24aa9993a5024cac28d87589ffbee.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Fence_Bottom_Right.png.import
 
 [params]
 

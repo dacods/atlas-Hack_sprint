@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/Pascal.png.import
-uid="uid://ckfyt2u0kerwu"
+uid="uid://b3vksupy46r43"
 path="res://.godot/imported/Pascal.png-2bcb0e013d235b40102591a9603ce36d.ctex"
-========
-uid="uid://cjyemv2bcuctj"
-path="res://.godot/imported/Ice_Left.png-f3c274e8371be29182345bd80cfa3494.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Ice_Left.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/Pascal.png.import
 source_file="res://assets/Pascal.png"
 dest_files=["res://.godot/imported/Pascal.png-2bcb0e013d235b40102591a9603ce36d.ctex"]
-========
-source_file="res://Hansel_assets/Images/Ice_Left.png"
-dest_files=["res://.godot/imported/Ice_Left.png-f3c274e8371be29182345bd80cfa3494.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Ice_Left.png.import
 
 [params]
 

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/New Piskel (5).png.import
-uid="uid://cktoems2mi6uc"
+uid="uid://bel6bndwpbt3x"
 path="res://.godot/imported/New Piskel (5).png-b7e31acc91c3a33e3bbf899463fbba0f.ctex"
-========
-uid="uid://8mu6p30esgiy"
-path="res://.godot/imported/Fence_Horizontal.png-8b5bdbabc59327b22fff0ab5e1a16217.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Fence_Horizontal.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/New Piskel (5).png.import
 source_file="res://assets/New Piskel (5).png"
 dest_files=["res://.godot/imported/New Piskel (5).png-b7e31acc91c3a33e3bbf899463fbba0f.ctex"]
-========
-source_file="res://Hansel_assets/Images/Fence_Horizontal.png"
-dest_files=["res://.godot/imported/Fence_Horizontal.png-8b5bdbabc59327b22fff0ab5e1a16217.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Fence_Horizontal.png.import
 
 [params]
 

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/water-sheet.png.import
-uid="uid://tdl1coxs1ux5"
+uid="uid://7wtd4c4dxsyj"
 path="res://.godot/imported/water-sheet.png-5d96ea8f9abf515ec4a8dd64fb69d987.ctex"
-========
-uid="uid://d3x8fni4msj5k"
-path="res://.godot/imported/Ice_Top_Right.png-b32e0cbd5522a09f0b47c5c1bfb77aff.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Ice_Top_Right.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/water-sheet.png.import
 source_file="res://assets/water-sheet.png"
 dest_files=["res://.godot/imported/water-sheet.png-5d96ea8f9abf515ec4a8dd64fb69d987.ctex"]
-========
-source_file="res://Hansel_assets/Images/Ice_Top_Right.png"
-dest_files=["res://.godot/imported/Ice_Top_Right.png-b32e0cbd5522a09f0b47c5c1bfb77aff.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Ice_Top_Right.png.import
 
 [params]
 

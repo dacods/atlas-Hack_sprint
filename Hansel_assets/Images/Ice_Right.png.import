@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:assets/LoopVine.png.import
-uid="uid://dav0ey6yckdal"
-path="res://.godot/imported/LoopVine.png-4482e666e69c982ba73721d63c77628a.ctex"
-========
-uid="uid://dwt84jgamoeo2"
+uid="uid://dmpcxlnwsxesk"
 path="res://.godot/imported/Ice_Right.png-364f27316e8e151191215fe1a80e1ab5.ctex"
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Ice_Right.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/LoopVine.png.import
-source_file="res://assets/LoopVine.png"
-dest_files=["res://.godot/imported/LoopVine.png-4482e666e69c982ba73721d63c77628a.ctex"]
-========
 source_file="res://Hansel_assets/Images/Ice_Right.png"
 dest_files=["res://.godot/imported/Ice_Right.png-364f27316e8e151191215fe1a80e1ab5.ctex"]
->>>>>>>> Dacoda_scene:Hansel_assets/Images/Ice_Right.png.import
 
 [params]
 

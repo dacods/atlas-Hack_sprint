@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal witch_defeated  # Define the custom signal
+
 # Enemy properties
 var health = 30  # Adjust the health as needed
 var speed = 100  # Enemy movement speed
@@ -59,6 +61,7 @@ func take_damage(amount):
 
 func die():
 	print("Enemy died!")
+	emit_signal("witch_defeated")  # Emit the signal when the witch is defeated
 	queue_free()  # Removes the enemy from the scene
 
 # This function is called when a body enters the enemy's Area2D

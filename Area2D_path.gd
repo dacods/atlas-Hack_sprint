@@ -50,7 +50,7 @@ func _on_Area2D_body_entered(body):
 			print("Player has the axe.")
 			# Show the "Hopefully this axe will keep me safe" message
 			has_weapon_panel.visible = true
-			has_weapon_label.text = "Hopefully this axe will keep me safe."
+			has_weapon_label.text = "Hansel: Hopefully this axe will keep me safe."
 
 			# Allow the player to move down the path after the message is shown
 			await get_tree().create_timer(3.0).timeout

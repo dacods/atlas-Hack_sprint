@@ -30,6 +30,10 @@ var inventory: Node = null
 @onready var fade_rect: ColorRect = $"../CanvasLayer/FadeRect"  # Adjust the path to your ColorRect node
 @onready var house_candy_area: Area2D = $"../HouseCandyArea"  # Adjust the path to your Area2D node
 
+# Reference to the Enemy Objective Canvas and Label
+@onready var objective_panel: Panel = $"../EnemyObjectiveCanvas/ObjectivePanel"  # Adjust the path to your Panel node
+@onready var objective_label: Label = $"../EnemyObjectiveCanvas/ObjectivePanel/ObjectiveLabel"  # Adjust the path to your Label node
+
 # Sequence control variables
 var text_sequence_active = false
 var event_triggered = false  # New variable to ensure the event triggers only once
@@ -55,6 +59,9 @@ func _ready():
 	text_panel.visible = false
 	fade_rect.visible = false
 	fade_rect.color = Color(0, 0, 0, 0)  # Transparent initially
+
+	# Hide the objective panel initially
+	objective_panel.visible = false
 
 	# Connect the area entered signal to start the sequence
 	house_candy_area.body_entered.connect(_on_house_candy_area_body_entered)
@@ -111,8 +118,19 @@ func start_text_sequence() -> void:
 
 	respawn_player()
 
+	# Show the "Defeat all enemies" message after respawning
+	show_objective("Defeat all enemies in the area! Then head back to the witch and defeat her!")
+
 func show_text(message: String) -> void:
 	text_panel.get_child(0).text = message  # Assuming the Label is the first child
+
+func show_objective(message: String) -> void:
+	objective_label.text = message
+	objective_panel.visible = true
+	
+	# Hide the objective message after a few seconds
+	await get_tree().create_timer(3.0).timeout  # Adjust the duration as needed
+	objective_panel.visible = false
 
 func fade_to_black() -> void:
 	fade_rect.visible = true
@@ -125,13 +143,29 @@ func fade_to_black() -> void:
 		await get_tree().create_timer(get_process_delta_time()).timeout
 
 func respawn_player() -> void:
-	# Move the player to the event respawn point
-	global_position = event_respawn_point.global_position
-	# Optionally reset other player states, like health
+	print("Respawning player...")
+
+	# Reset the player's health
+	current_health = max_health
+	print("Health reset to max: " + str(max_health))
+
+	# Update the health label
+	if health_label != null:
+		update_health_label()
+	else:
+		print("Health label is null!")
+
+	# Move the player to the event respawn point's position
+	if event_respawn_point != null:
+		global_position = event_respawn_point.global_position
+		print("Player has respawned at position: " + str(event_respawn_point.global_position))
+	else:
+		print("Event respawn point not found!")
+
+	# Reset other states if needed
 	text_panel.visible = false
-	fade_rect.color = Color(0, 0, 0, 1)  # Keep the screen black after respawn
-	await get_tree().create_timer(1.0).timeout  # Wait a moment before fading back in
 	fade_rect.visible = false
+	fade_rect.color = Color(0, 0, 0, 0)
 	text_sequence_active = false
 
 func perform_attack() -> void:
@@ -176,20 +210,7 @@ func take_damage(amount: int) -> void:
 
 func die() -> void:
 	print("Player died!")
-	respawn()
-
-func respawn() -> void:
-	# Reset the player's health
-	current_health = max_health
-
-	# Update the health label
-	update_health_label()
-
-	# Move the player to the respawn point's position
-	global_position = respawn_point.global_position
-
-	# Print a message indicating the player has respawned
-	print("Player has respawned at position: " + str(respawn_point.global_position))
+	respawn_player()  # Call the respawn_player function instead of respawn()
 
 func regenerate_health(delta: float) -> void:
 	if current_health < max_health:
@@ -201,6 +222,8 @@ func update_health_label() -> void:
 	if health_label != null:
 		# Round the health value before displaying it
 		health_label.text = "Health: " + str(int(round(current_health))) + "/" + str(max_health)
+	else:
+		print("Health label is null!")
 
 func has_axe() -> bool:
 	if inventory != null:
@@ -208,11 +231,3 @@ func has_axe() -> bool:
 			if item.name == "Axe":
 				return true
 	return false
-
-
-func _on_start_area_trigger_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_area_2d_body_entered(body):
-	pass # Replace with function body.

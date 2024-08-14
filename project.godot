@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Hack"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://Hansel_scenes/node_2d.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Hansel_assets/Images/icon.svg"
 
 [input]
 

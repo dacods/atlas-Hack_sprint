@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://da6y2m5ri4s1o"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -55.0
+offset_top = -34.0
+offset_right = 356.0
+offset_bottom = 80.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 401.0
+offset_bottom = 82.0
+text = "henivjneibvneijvjnsfvnesf
+kjsdnvisjdvnsd
+sjdvsdijvnvd
+kc oskdfn vdo"

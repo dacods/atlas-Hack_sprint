@@ -7041,7 +7041,7 @@ script = ExtResource("33_fn128")
 position = Vector2(-195, 139)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/FinalFightTrigger"]
-position = Vector2(269, 101)
+position = Vector2(381, 206)
 shape = SubResource("CircleShape2D_xafij")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Node2D"]

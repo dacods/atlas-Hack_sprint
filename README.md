@@ -1,3 +1,4 @@
+
 ## Two Dudes, Two Games
 
 A collaborative effort to make two 2D story games inspired by classic fairytales. This project aims to create a story driven experience with fairly engaging gameplay.
@@ -9,4 +10,22 @@ Hansel's Mission: Inspired by the fairytale Hansel and Gretel. Gretel is taken b
 
 - Two Games: Explore two different fairytales each with their own "storylines"
 - Collaborative Development: Developed by Braden Chance and Dacoda Takagi, leveraging individual skills and visions.
-- Pixel Art: Both games showcase pixel art graphics for the gaming experience. 
+- Pixel Art: Both games showcase pixel art graphics, capturing the nostalgic aesthetic of some of our favorite games.
+
+## Installation
+
+Download our project on itch.io
+
+* https://dacods.itch.io/two-dudes-two-games
+```bash
+  Windows: extract zip file
+  Launch Two Games, Two Dudes (Application)
+```
+```bash
+  MacOS: Locate file in your system
+  Launch Two Games, Two Dudes (Application)
+```
+## Authors
+
+- [@BPChance](https://www.github.com/BPChance)
+- [@dacods](https://github.com/dacods)

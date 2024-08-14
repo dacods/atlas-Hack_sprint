@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dno7hvw4h87mu"]
+
+[ext_resource type="Script" path="res://scripts/pascal.gd" id="1_0pn6e"]
+[ext_resource type="Texture2D" uid="uid://ckfyt2u0kerwu" path="res://assets/Pascal.png" id="1_t8k3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yyov"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_amcf4"]
+radius = 31.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_0pn6e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14, -10)
+shape = SubResource("RectangleShape2D_8yyov")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10.4688, -9.34375)
+scale = Vector2(0.043439, 0.0448086)
+texture = ExtResource("1_t8k3f")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(28, -18)
+shape = SubResource("CircleShape2D_amcf4")

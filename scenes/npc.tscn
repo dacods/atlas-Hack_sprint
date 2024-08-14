@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1c4x7pgis8y2"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_147h3"]
+[ext_resource type="Texture2D" uid="uid://cktoems2mi6uc" path="res://assets/New Piskel (5).png" id="2_topfg"]
+[ext_resource type="PackedScene" uid="uid://b6ewimfwohwud" path="res://textbox.tscn" id="3_2rlw8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b20le"]
+size = Vector2(23, 29)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_in61i"]
+radius = 33.0606
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_147h3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_topfg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -8.5)
+shape = SubResource("RectangleShape2D_b20le")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7, -8)
+shape = SubResource("CircleShape2D_in61i")
+
+[node name="textbox" parent="." instance=ExtResource("3_2rlw8")]
+visible = false

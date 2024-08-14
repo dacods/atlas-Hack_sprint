@@ -208,3 +208,11 @@ func has_axe() -> bool:
 			if item.name == "Axe":
 				return true
 	return false
+
+
+func _on_start_area_trigger_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.

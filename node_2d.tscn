@@ -1,6 +1,7 @@
-[gd_scene load_steps=81 format=3 uid="uid://brk3sh45u0ki1"]
+[gd_scene load_steps=91 format=3 uid="uid://brk3sh45u0ki1"]
 
 [ext_resource type="Texture2D" uid="uid://cibe6t5px82q1" path="res://Snow_3.png" id="1_2lxfm"]
+[ext_resource type="Script" path="res://node_2d.gd" id="1_o3tvd"]
 [ext_resource type="Texture2D" uid="uid://v73gblhimkw5" path="res://spritesheet.png" id="2_estcb"]
 [ext_resource type="Texture2D" uid="uid://smc01gqg6dko" path="res://Log_Cabin.png" id="3_chop8"]
 [ext_resource type="Texture2D" uid="uid://cnwjntddotbu3" path="res://Pepper_mint.webp" id="4_80mb0"]
@@ -26,8 +27,11 @@
 [ext_resource type="Texture2D" uid="uid://coakjbvgouegs" path="res://axe.png" id="23_gcfo5"]
 [ext_resource type="Script" path="res://Chest.gd" id="23_wd245"]
 [ext_resource type="PackedScene" uid="uid://gv34jnk0r4tq" path="res://enemy.tscn" id="26_eotoj"]
+[ext_resource type="FontFile" uid="uid://dwekvofgea58d" path="res://PixelifySans-VariableFont_wght.ttf" id="26_nfyds"]
 [ext_resource type="PackedScene" uid="uid://b6p4khhkiedmv" path="res://enemy_2.tscn" id="27_6wtam"]
 [ext_resource type="PackedScene" uid="uid://bphdnppcsnrle" path="res://witch.tscn" id="28_lyevl"]
+[ext_resource type="Script" path="res://StartAreaTrigger.gd" id="31_4mlbf"]
+[ext_resource type="Script" path="res://Area2D_path.gd" id="32_tiqch"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwqes"]
 texture = ExtResource("1_2lxfm")
@@ -6575,7 +6579,42 @@ radius = 136.033
 [sub_resource type="CircleShape2D" id="CircleShape2D_p286g"]
 radius = 136.059
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvsqb"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.427451, 0.360784, 0.207843, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5mj1"]
+size = Vector2(55, 27)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvkgj"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.427451, 0.360784, 0.207843, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17554"]
+size = Vector2(28, 43)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uio53"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.427451, 0.360784, 0.207843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lyloi"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.427451, 0.360784, 0.207843, 1)
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_o3tvd")
 
 [node name="Snow" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_l36lf")
@@ -6686,7 +6725,7 @@ texture = ExtResource("23_gcfo5")
 position = Vector2(0.77417, 0.307709)
 shape = SubResource("RectangleShape2D_my0jo")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("10_gxv12")]
+[node name="CharacterBody2D" parent="." groups=["player"] instance=ExtResource("10_gxv12")]
 position = Vector2(542, 213)
 collision_mask = 1
 script = ExtResource("19_m80tx")
@@ -6766,6 +6805,9 @@ offset_left = 8.0
 offset_top = 4.0
 offset_right = 484.0
 offset_bottom = 162.84
+theme_override_fonts/font = ExtResource("26_nfyds")
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 1
 
 [node name="Enemy" parent="." groups=["enemies"] instance=ExtResource("26_eotoj")]
@@ -6808,6 +6850,106 @@ shape = SubResource("CircleShape2D_p286g")
 [node name="EventMarker" type="Marker2D" parent="."]
 position = Vector2(989, 1090)
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="FadeRect" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+offset_left = -326.0
+offset_top = -1.0
+offset_right = 1169.0
+offset_bottom = 1196.0
+
+[node name="TextPanel" type="Panel" parent="CanvasLayer2"]
+visible = false
+offset_left = 326.0
+offset_top = 471.0
+offset_right = 810.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mvsqb")
+
+[node name="Label" type="Label" parent="CanvasLayer2/TextPanel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 482.0
+offset_bottom = 167.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="StartAreaTrigger" type="Area2D" parent="."]
+position = Vector2(558, 503)
+script = ExtResource("31_4mlbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartAreaTrigger"]
+position = Vector2(2.5, -4.5)
+shape = SubResource("RectangleShape2D_h5mj1")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer3"]
+visible = false
+offset_left = 321.0
+offset_top = 473.0
+offset_right = 805.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xvkgj")
+
+[node name="Label" type="Label" parent="CanvasLayer3/Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 475.0
+offset_bottom = 169.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(305, 531)
+script = ExtResource("32_tiqch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, 4.5)
+shape = SubResource("RectangleShape2D_17554")
+
+[node name="NoWeaponCanvas" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="NoWeaponCanvas"]
+visible = false
+offset_left = 335.0
+offset_top = 468.0
+offset_right = 819.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uio53")
+
+[node name="Label" type="Label" parent="NoWeaponCanvas/Panel"]
+layout_mode = 0
+offset_right = 484.0
+offset_bottom = 179.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="HasWeaponCanvas" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="HasWeaponCanvas"]
+visible = false
+offset_left = 332.0
+offset_top = 468.0
+offset_right = 816.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lyloi")
+
+[node name="Label" type="Label" parent="HasWeaponCanvas/Panel"]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 174.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
 [connection signal="body_entered" from="Chest/Area2D" to="Chest" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Chest/Area2D" to="Chest" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="HouseCandyArea" to="CharacterBody2D" method="_on_house_candy_area_body_entered"]
+[connection signal="body_entered" from="StartAreaTrigger" to="CharacterBody2D" method="_on_start_area_trigger_body_entered"]

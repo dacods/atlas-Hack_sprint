@@ -1,12 +1,8 @@
-[gd_scene load_steps=100 format=3 uid="uid://cvftfdq5lr6ml"]
+[gd_scene load_steps=95 format=3 uid="uid://cvftfdq5lr6ml"]
 
-[ext_resource type="Texture2D" uid="uid://dmriled43xfh4" path="res://hack-sprint-1/sprites/tilesets/floors/grass.png" id="1_sjg45"]
 [ext_resource type="Texture2D" uid="uid://ykbnpoudtmt0" path="res://assets/water1.png" id="3_i3r5y"]
 [ext_resource type="Texture2D" uid="uid://tdl1coxs1ux5" path="res://assets/water-sheet.png" id="4_kmjyb"]
 [ext_resource type="Texture2D" uid="uid://c5dlbg454v8uh" path="res://assets/plains.png" id="5_yxlbe"]
-[ext_resource type="Texture2D" uid="uid://d3hynvdjtniu7" path="res://hack-sprint-1/sprites/tilesets/floors/mystic_woods_2.2/sprites/tilesets/floors/wooden.png" id="6_be6n8"]
-[ext_resource type="Texture2D" uid="uid://cg28s3n323aiv" path="res://hack-sprint-1/sprites/tilesets/floors/mystic_woods_2.2/sprites/tilesets/walls/walls.png" id="7_t38ck"]
-[ext_resource type="Texture2D" uid="uid://bwsjv1s8uhh8u" path="res://hack-sprint-1/sprites/tilesets/floors/mystic_woods_2.2/sprites/tilesets/walls/wooden_door_b.png" id="8_gi7qp"]
 [ext_resource type="Texture2D" uid="uid://bb68146vdhnrl" path="res://assets/objects.png" id="9_8x6rx"]
 [ext_resource type="Texture2D" uid="uid://2s2paxfsmml5" path="res://assets/Rapunzel_tower (2).png" id="10_xo6bp"]
 [ext_resource type="Texture2D" uid="uid://bas4dnkx1sgah" path="res://assets/decor_8x8.png" id="11_ndtmd"]
@@ -16,8 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://h8ccw187icqc" path="res://assets/water_lillies.png" id="15_ahi0y"]
 [ext_resource type="Texture2D" uid="uid://das4uwlppenhl" path="res://assets/rock_in_water_01-sheet.png" id="16_q4y0o"]
 [ext_resource type="Texture2D" uid="uid://d4hhfcwgd2djp" path="res://assets/chest_02.png" id="17_k2dlg"]
-[ext_resource type="Texture2D" uid="uid://d1y6mhsl8iv1" path="res://assets/chest_01.png" id="18_lg7dh"]
-[ext_resource type="Texture2D" uid="uid://ckmx0rjwbh5g2" path="res://hack-sprint-1/sprites/objects/objects.png" id="19_bd1vn"]
+[ext_resource type="Texture2D" uid="uid://7a352lby34o0" path="res://assets/chest_01.png" id="18_lg7dh"]
 [ext_resource type="Texture2D" uid="uid://n5gtx5s5cbor" path="res://assets/VinesHeaderBanner.jpg" id="20_kxjx5"]
 [ext_resource type="Texture2D" uid="uid://cguk2q0b15xm5" path="res://assets/New Piskel (2).png" id="21_bstw1"]
 [ext_resource type="Texture2D" uid="uid://b6fl4lyo4dt33" path="res://assets/VinesSheet.png" id="22_wvh74"]
@@ -29,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://bs0kku4kf45lk" path="res://scenes/chest.tscn" id="28_vk57g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xadbd"]
-texture = ExtResource("1_sjg45")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wf7a1"]
@@ -210,11 +204,9 @@ texture = ExtResource("5_yxlbe")
 3:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvsuw"]
-texture = ExtResource("6_be6n8")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ghn2"]
-texture = ExtResource("7_t38ck")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -248,7 +240,6 @@ texture = ExtResource("7_t38ck")
 5:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0o1fl"]
-texture = ExtResource("8_gi7qp")
 0:0/0 = 0
 1:0/0 = 0
 
@@ -726,26 +717,16 @@ sources/8 = SubResource("TileSetAtlasSource_wyfkj")
 sources/9 = SubResource("TileSetAtlasSource_0nbue")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g0oml"]
-texture = ExtResource("19_bd1vn")
-0:5/size_in_atlas = Vector2i(3, 4)
 0:5/0 = 0
-3:5/size_in_atlas = Vector2i(3, 4)
 3:5/0 = 0
-0:9/size_in_atlas = Vector2i(3, 4)
 0:9/0 = 0
-3:9/size_in_atlas = Vector2i(3, 4)
 3:9/0 = 0
-6:9/size_in_atlas = Vector2i(3, 1)
 6:9/0 = 0
-6:7/size_in_atlas = Vector2i(2, 2)
 6:7/0 = 0
-8:6/size_in_atlas = Vector2i(2, 3)
 8:6/0 = 0
 8:5/0 = 0
 9:5/0 = 0
-10:5/size_in_atlas = Vector2i(2, 2)
 10:5/0 = 0
-10:7/size_in_atlas = Vector2i(2, 2)
 10:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_f7g7h"]
@@ -6830,7 +6811,6 @@ texture_region_size = Vector2i(20, 16)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v6vl7"]
-texture = ExtResource("1_sjg45")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x4y7a"]
@@ -13418,7 +13398,7 @@ layer_0/tile_data = PackedInt32Array(-1114019, 786432, 0, -1179555, 0, 0, -11795
 [node name="CharacterBody2D" parent="." instance=ExtResource("25_pk2hq")]
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(4, 3)
+zoom = Vector2(1.333, 1)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("26_dp0ag")]
 position = Vector2(1496, 50)

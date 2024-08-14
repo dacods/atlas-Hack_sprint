@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bk3e803fmy5fd"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_8uuur"]
-[ext_resource type="Texture2D" uid="uid://b5yji8lsolsjb" path="res://hack-sprint-1/sprites/characters/player.png" id="2_uuywd"]
+[ext_resource type="Texture2D" uid="uid://ofrtah44pxgb" path="res://assets/player.png" id="2_sd7i1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pmvw"]
 radius = 12.0
@@ -18,6 +18,6 @@ shape = SubResource("CapsuleShape2D_4pmvw")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, -17)
 scale = Vector2(1.20161, 1.27396)
-texture = ExtResource("2_uuywd")
+texture = ExtResource("2_sd7i1")
 region_enabled = true
 region_rect = Rect2(16, 10, 31, 32)

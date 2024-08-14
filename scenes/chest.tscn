@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bs0kku4kf45lk"]
 
-[ext_resource type="Texture2D" uid="uid://ca74fm4uw7w0n" path="res://hack-sprint/sprites/objects/chest_01.png" id="1_c7hot"]
 [ext_resource type="Script" path="res://scripts/chest.gd" id="1_x84te"]
+[ext_resource type="Texture2D" uid="uid://7a352lby34o0" path="res://assets/chest_01.png" id="2_db8go"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy67x"]
 size = Vector2(16, 30)
@@ -15,7 +15,7 @@ script = ExtResource("1_x84te")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -10)
 scale = Vector2(0.9375, 1.25)
-texture = ExtResource("1_c7hot")
+texture = ExtResource("2_db8go")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 

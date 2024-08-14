@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://cvftfdq5lr6ml"]
+[gd_scene load_steps=99 format=3 uid="uid://cvftfdq5lr6ml"]
 
 [ext_resource type="Texture2D" uid="uid://dlda1f5ousgy2" path="res://assets/water1.png" id="3_i3r5y"]
 [ext_resource type="Texture2D" uid="uid://7wtd4c4dxsyj" path="res://assets/water-sheet.png" id="4_kmjyb"]
@@ -18,7 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://jjnb5tu0hd81" path="res://assets/VinesSheet.png" id="22_wvh74"]
 [ext_resource type="Script" path="res://scenes/transition_script.gd" id="23_ki5vj"]
 [ext_resource type="Texture2D" uid="uid://bd0jeeyid63co" path="res://assets/Rapunzel_tower (4).png" id="23_oxcd4"]
+[ext_resource type="Script" path="res://scenes/Loading.gd" id="24_1otmy"]
 [ext_resource type="Texture2D" uid="uid://dbltd2qa4jvfr" path="res://assets/LoopVine.png" id="24_h28xj"]
+[ext_resource type="FontFile" uid="uid://ckhk86idjx8wn" path="res://assets/PixelifySans-VariableFont_wght.ttf" id="25_depj1"]
 [ext_resource type="PackedScene" uid="uid://bk3e803fmy5fd" path="res://scenes/character_body_2d.tscn" id="25_pk2hq"]
 [ext_resource type="PackedScene" uid="uid://b1c4x7pgis8y2" path="res://scenes/npc.tscn" id="26_dp0ag"]
 [ext_resource type="PackedScene" uid="uid://dno7hvw4h87mu" path="res://scenes/pascal.tscn" id="27_pnmsk"]
@@ -13421,5 +13423,25 @@ script = ExtResource("23_ki5vj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-18, -2)
 shape = SubResource("CircleShape2D_pihul")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D"]
+script = ExtResource("24_1otmy")
+
+[node name="ColorRect" type="ColorRect" parent="Area2D/CanvasLayer"]
+visible = false
+offset_left = -1141.0
+offset_top = -1154.0
+offset_right = 2954.0
+offset_bottom = 883.0
+color = Color(0, 0, 0, 1)
+
+[node name="LoadingLabel" type="Label" parent="Area2D/CanvasLayer"]
+offset_left = 823.0
+offset_top = 553.0
+offset_right = 1695.0
+offset_bottom = 1066.0
+theme_override_fonts/font = ExtResource("25_depj1")
+theme_override_font_sizes/font_size = 75
+text = "Loading..."
 
 [connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

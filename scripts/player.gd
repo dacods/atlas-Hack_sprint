@@ -4,7 +4,7 @@ extends CharacterBody2D
 func _ready():
 	self.name = "Player"  # set the name of the player node
 
-@export var speed: int = 500 # is 100, 500 for testing
+@export var speed: int = 150 # is 100, 500 for testing
 
 func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
